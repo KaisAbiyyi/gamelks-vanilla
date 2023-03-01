@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GAEM</title>
+</head>
+
+<body>
+    <div id="gameframe">
+        <div id="startingframe">
+            <input type="text" id="inputname" placeholder="Your Name...">
+            <button id="enter" onclick="enter()">ENTER</button>
+        </div>
+        <div id="countdown">
+            <span id="timer"></span>
+        </div>
+        <div class="action">
+            <button id="hide" onclick="hide()">HIDE</button>
+            <button id="start" onclick="start()">START</button>
+            <button id="attack" onclick="attack()">ATTACK</button>
+        </div>
+        <div id="planet">
+            <div class="startingpoint" id="ballcontainer">
+                <div id="ball"></div>
+            </div>
+            <div class="player" id="player">
+                <span id="name">Player</span>
+                <div class="core" id="playercore"></div>
+                <div class="sword" id="playersword"></div>
+            </div>
+            <div class="player enemy" id="enemy1">
+                <span class="name">ENEMY1</span>
+                <div class="core" id="enemycore1"></div>
+                <div class="sword" id="enemysword1"></div>
+            </div>
+            <div class="player enemy" id="enemy2">
+                <span class="name">ENEMY2</span>
+                <div class="core" id="enemycore2"></div>
+                <div class="sword" id="enemysword2"></div>
+            </div>
+            <div class="player enemy" id="enemy3">
+                <span class="name">ENEMY3</span>
+                <div class="core" id="enemycore3"></div>
+                <div class="sword" id="enemysword3"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+
+</html>

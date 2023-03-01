@@ -1,0 +1,245 @@
+button {
+  border: 0;
+  outline: 0;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
+#gameframe {
+  width: 1280px;
+  height: 720px;
+  border-radius: 20px;
+  background-color: #222222;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#gameframe #countdown {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.637);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  opacity: 0;
+  transition: 0.4s;
+  border-radius: 20px;
+  z-index: 8;
+}
+#gameframe #countdown #timer {
+  font-size: 50px;
+  font-weight: 800;
+  color: white;
+}
+#gameframe #startingframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.637);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  transition: 0.4s;
+  border-radius: 20px;
+  z-index: 9;
+  gap: 10px;
+}
+#gameframe #startingframe #inputname {
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+}
+#gameframe #startingframe #enter {
+  padding: 20px;
+  background-color: orange;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#gameframe .action {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: end;
+  gap: 20px;
+  padding: 20px;
+}
+#gameframe .action #start {
+  padding: 25px 30px;
+  background-color: orange;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#gameframe .action button {
+  padding: 20px;
+  background-color: orange;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 20px;
+  border-radius: 10px;
+}
+#gameframe #planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: orangered;
+  height: 450px;
+  width: 450px;
+  border-radius: 50%;
+}
+#gameframe #planet .player {
+  height: 100px;
+  width: 50px;
+  border-radius: 10px;
+  background-color: lightblue;
+  position: absolute;
+  transition: 0.2s;
+}
+#gameframe #planet .player .name {
+  transform-origin: 0 0;
+  font-weight: bold;
+  font-size: 11px;
+}
+#gameframe #planet .player .core {
+  width: 1px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+}
+#gameframe #planet .player .sword {
+  width: 100px;
+  height: 100px;
+  display: none;
+  opacity: 50%;
+  border-radius: 10px;
+  background-color: gray;
+  z-index: 9;
+  position: absolute;
+  transition: 0.2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#gameframe #planet .dead {
+  display: none;
+}
+#gameframe #planet #player {
+  top: -25px;
+  right: 0;
+  transform: rotate(45deg);
+  background-color: pink;
+}
+#gameframe #planet #player #name {
+  position: absolute;
+  top: -25px;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#gameframe #planet #enemy1 {
+  top: -25px;
+  left: 0;
+  transform: rotate(-45deg);
+}
+#gameframe #planet #enemy2 {
+  bottom: -25px;
+  left: 0;
+  transform: rotate(45deg);
+}
+#gameframe #planet #enemy3 {
+  bottom: -25px;
+  right: 0;
+  transform: rotate(-45deg);
+}
+#gameframe #planet #ballcontainer {
+  height: 450px;
+  width: 450px;
+  position: relative;
+}
+#gameframe #planet #ballcontainer #ball {
+  width: 25px;
+  height: 25px;
+  background-color: lightgray;
+  border-radius: 50%;
+  position: absolute;
+}
+#gameframe #planet .startingpoint #ball {
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%);
+}
+#gameframe #planet .fromenemy3clockwise #ball {
+  bottom: 70px;
+  right: -60px;
+}
+#gameframe #planet .fromenemy3counter #ball {
+  top: unset;
+  bottom: -60px;
+  right: 75px;
+}
+#gameframe #planet .fromenemy2clockwise #ball {
+  top: unset;
+  bottom: -60px;
+  left: 75px;
+}
+#gameframe #planet .fromenemy2counter #ball {
+  top: unset;
+  bottom: 70px;
+  left: -60px;
+}
+#gameframe #planet .fromenemy1clockwise #ball {
+  top: 70px;
+  left: -60px;
+}
+#gameframe #planet .fromenemy1counter #ball {
+  top: -60px;
+  left: 75px;
+}
+#gameframe #planet .fromplayerclockwise #ball {
+  right: 75px;
+  top: -60px;
+  left: unset;
+}
+#gameframe #planet .fromplayercounter #ball {
+  right: -60px;
+  top: 70px;
+}
+#gameframe #planet .rotateclockwise {
+  animation: spin-right 5s linear infinite;
+}
+#gameframe #planet .rotatecounterclockwise {
+  animation: spin-left 5s linear infinite;
+}
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-left {
+  100% {
+    transform: rotate(-360deg);
+  }
+}/*# sourceMappingURL=style.css.map */
